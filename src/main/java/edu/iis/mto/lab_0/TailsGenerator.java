@@ -12,6 +12,7 @@ public class TailsGenerator {
 
         ArrayList<String> tailsArrayList = new ArrayList<>(value.length() + 1);
         int size = value.length();
+        tailsArrayList.add(value);
         for (int i = 0; i < size; i++) {
             tailsArrayList.add(value.substring(i + 1, size));
         }
