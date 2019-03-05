@@ -6,11 +6,18 @@ import java.util.List;
 public class TailsGenerator {
 
     public List<String> tails(String value) {
-        if (value == null){
+        if (value == null) {
             return new ArrayList<>(0);
         }
 
-        return new ArrayList<>(value.length());
+        ArrayList<String> tailsArrayList = new ArrayList<>(value.length() + 1);
+        int size = value.length();
+        for (int i = 0; i < size; i++) {
+            tailsArrayList.add(value.substring(i + 1, size));
+        }
+
+        return tailsArrayList;
+
     }
 
 }
