@@ -1,20 +1,20 @@
 package edu.iis.mto.lab_0;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TailsGenerator {
 
     public List<String> tails(String value) {
         if (value == null) {
-            return new ArrayList<>(0);
+            return Collections.emptyList();
         }
 
         ArrayList<String> tailsArrayList = new ArrayList<>(value.length() + 1);
         int size = value.length();
-        tailsArrayList.add(value);
-        for (int i = 0; i < size; i++) {
-            tailsArrayList.add(value.substring(i + 1, size));
+        for (int i = 0; i <= size; i++) {
+            tailsArrayList.add(value.substring(i, size));
         }
 
         return tailsArrayList;
